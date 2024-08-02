@@ -82,7 +82,7 @@
   right: 0;
   position: absolute;
   width: 100%;
-  max-width: 20rem;
+  max-width: 25rem;
   overflow-y: auto;
   border-left: 1px solid #111;
 }
