@@ -1,3 +1,4 @@
+
 let handleMemberJoined = async (MemberId) => {
     console.log('A new member has joined the room:', MemberId)
     addMemberToDom(MemberId)
@@ -104,7 +105,7 @@ let addBotMessageToDom = (botMessage) => {
 
     let newMessage = `<div class="message__wrapper">
                         <div class="message__body__bot">
-                            <strong class="message__author__bot">🤖 Mumble Bot</strong>
+                            <strong class="message__author__bot">🤖 Smart Room Bot</strong>
                             <p class="message__text__bot">${botMessage}</p>
                         </div>
                     </div>`
