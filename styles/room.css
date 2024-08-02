@@ -12,7 +12,7 @@
 }
 
 #members__container {
-  background-color: rgb(31 41 55);
+  background-color: #1d232a;
   border-right: 1px solid #000;
   overflow-y: auto;
   width: 90%;
@@ -137,7 +137,7 @@
 
 .message__author__bot {
   margin-right: 10px;
-  color: #a52aca!important;
+  color: #87DF2C!important;
 
 }
 
