@@ -368,20 +368,3 @@
   transform: translateX(-50%);
   cursor: pointer;
 }
-
-/* styles/room.css */
-
-/* Giữ kiểu dáng giống như "Smart Room" */
-#logo {
-  font-size: 24px; /* Hoặc kích thước hiện tại của chữ Smart Room */
-  font-weight: bold;
-  color: #fff; /* Màu chữ, điều chỉnh nếu cần */
-}
-
-#room-name-container {
-  display: inline; /* Hiển thị inline để không phá vỡ bố cục */
-}
-
-#room-name-placeholder {
-  display: inline; /* Hiển thị inline để không phá vỡ bố cục */
-}
