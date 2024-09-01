@@ -6,20 +6,110 @@
     <title>Room</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
-
     <link rel='stylesheet' type='text/css' media='screen' href='styles/room.css'>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+          margin-top: 74px;
+          height: calc(100vh - 74px);
+          width: 100%;
+          position: relative;
+        }
+
+        #room__container {
+          position: relative;
+          display: flex;
+          gap: 3rem;
+        }
+
+        #members__container {
+          background-color: rgba(38, 38, 37, 0.8);
+          backdrop-filter: blur(10px);
+          border-right: 1px solid rgba(92, 184, 92, 0.3);
+          overflow-y: auto;
+          width: 90%;
+          max-width: 250px;
+          position: fixed;
+          height: 100%;
+          z-index: 999;
+        }
+
+        #members__count {
+          background-color: #87df2c;
+          padding: 7px 15px;
+          font-size: 14px;
+          font-weight: 600;
+          border-radius: 5px;
+        }
+
+        #members__header {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 0 1rem;
+          position: fixed;
+          font-size: 18px;
+          background-color: #5cb85c;
+          width: 218px;
+          border-radius: 10px 10px 0 0;
+        }
+
+        #member__list {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          padding-top: 5rem;
+          padding-bottom: 6.5rem;
+        }
+
+        /* ... (các quy tắc CSS khác) ... */
+
+        @media (max-width: 640px) {
+            .participant-name {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
+            .participants-list {
+                max-height: 300px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+          #room-name-label {
+            display: none;
+          }
+
+          #room-name {
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 150px;
+          }
+        }
+    </style>
 </head>
 <body>
 
     <header id="nav">
        <div class="nav--list">
             <button id="members__button">
-               <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#ede0e0"><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
+               <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#ede0e0"><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
             </button>
             <a href="index.html"/>
                 <h3 id="logo">
                     <img src="./images/logo.png" alt="Site Logo">
-                    <span>Smart Room</span>
+                    <span id="room-name-wrapper">
+                        <span id="room-name-label">Room Name: </span>
+                        <span id="room-name"></span>
+                    </span>
                 </h3>
             </a>
        </div>
