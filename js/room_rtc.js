@@ -256,6 +256,9 @@ let leaveStream = async (e) => {
     }
   }
 
+  // Hiển thị lại nút camera
+  document.getElementById("camera-btn").style.display = "block";
+
   channel.sendMessage({
     text: JSON.stringify({ type: "user_left", uid: uid }),
   });
