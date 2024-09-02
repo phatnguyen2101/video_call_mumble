@@ -264,3 +264,15 @@ a {
   font-weight: bold;
   color: #5cb85c;
 }
+
+#camera-btn.active {
+  background-color: #ffffff;
+}
+
+#mic-btn.active {
+  background-color: #ffffff;
+}
+
+#screen-btn.active {
+  background-color: #e4e4e4;
+}
