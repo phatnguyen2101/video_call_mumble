@@ -256,8 +256,15 @@ let leaveStream = async (e) => {
     }
   }
 
-  // Hiển thị lại nút camera
+  // Hiển thị lại nút camera và mic
   document.getElementById("camera-btn").style.display = "block";
+  document.getElementById("mic-btn").style.display = "block";
+
+  // Reset trạng thái các nút
+  document.getElementById("camera-on").style.display = "inline";
+  document.getElementById("camera-off").style.display = "none";
+  document.getElementById("mic-on").style.display = "inline";
+  document.getElementById("mic-off").style.display = "none";
 
   channel.sendMessage({
     text: JSON.stringify({ type: "user_left", uid: uid }),
