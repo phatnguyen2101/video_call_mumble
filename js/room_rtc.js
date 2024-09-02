@@ -238,7 +238,11 @@ let leaveStream = async (e) => {
   await client.unpublish([localTracks[0], localTracks[1]]);
 
   if (localScreenTracks) {
+    localScreenTracks.stop();
+    localScreenTracks.close();
     await client.unpublish([localScreenTracks]);
+    localScreenTracks = null;
+    sharingScreen = false;
   }
 
   document.getElementById(`user-container-${uid}`).remove();
